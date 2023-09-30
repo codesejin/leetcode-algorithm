@@ -13,7 +13,8 @@ class Solution {
                 int py = points[j][1];
                 
                 // 점 (px, py)가 원 (cx, cy, r) 내부에 있는지 확인
-                if ((px - cx) * (px - cx) + (py - cy) * (py - cy) <= r * r) {
+                double distance = Math.sqrt(Math.pow(px - cx, 2) + Math.pow(py - cy, 2));
+                if (distance <= r) {
                     cnt++;
                 }
             }
