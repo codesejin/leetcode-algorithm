@@ -1,5 +1,4 @@
 class Solution {
-    // 키가 오름차순으로 서야한다
     public int heightChecker(int[] heights) {
         int[] sortedHeights = Arrays.copyOf(heights, heights.length);
         Arrays.sort(sortedHeights);
