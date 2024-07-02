@@ -31,13 +31,16 @@ class Solution {
           }
         }
         int result = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (j % 2 != 0) {
-                    result += twoDArray[i][j];
+
+        for (int i = 0; i < twoDArray.length; i++) {
+            for (int j = 0; j < twoDArray[i].length; j++) {
+                // 홀수값인지 확인
+                if (twoDArray[i][j] % 2 != 0) {
+                    result++; 
                 }
             }
         }
-        return (int)Arrays.stream(twoDArray).flatMapToInt(Arrays::stream).filter(num -> num % 2 != 0).count();
+        return result;
+        //return (int)Arrays.stream(twoDArray).flatMapToInt(Arrays::stream).filter(num -> num % 2 != 0).count();
     }
 }
