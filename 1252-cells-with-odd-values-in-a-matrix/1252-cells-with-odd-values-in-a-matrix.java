@@ -14,9 +14,6 @@ class Solution {
         for (int i = 0; i < indices.length; i++) {
             int x = indices[i][0];
             int y = indices[i][1];
-            //list.add(new Coordinate("X"), x);
-            //list.add(new Coordinate("Y"), x);
-            
             map.get("X").add(x);
             map.get("Y").add(y);
         }
@@ -43,14 +40,4 @@ class Solution {
         }
         return (int)Arrays.stream(twoDArray).flatMapToInt(Arrays::stream).filter(num -> num % 2 != 0).count();
     }
-    
-//     static Class Coordinate {
-//         String location;
-//         int idx;
-        
-//         public coordinate ( String location, int idx ) {
-//             this.location = location;
-//             this.idx = idx;
-//         }
-//     }
 }
