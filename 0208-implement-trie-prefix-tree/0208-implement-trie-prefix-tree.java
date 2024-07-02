@@ -18,7 +18,7 @@ class Trie {
     }
     
     public void insert(String word) {
-        // 루트 노드로 선언한 TrieNode zmffotm
+        // 루트 노드부터 시작
         TrieNode cur = root;
         // 단어의 문자를 차례대로 반복하면서 자식 노드 구성
         for(char c : word.toCharArray()) {
