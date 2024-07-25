@@ -19,23 +19,20 @@ class ParkingSystem {
 				if (bigSpace > 0) {
 					bigSpace--;
 					return true;
-				} else {
-					return false;
-				}
+				} return false;
+
 			case 2:
 				if (mediumSpace > 0) {
 					mediumSpace--;
 					return true;
-				} else {
-					return false;
-				}
+				} return false;
+
 			case 3:
 				if (smallSpace > 0) {
 					smallSpace--;
 					return true;
-				} else {
-					return false;
-				}
+				} return false;
+
 			default:
 				return false;
 		}
