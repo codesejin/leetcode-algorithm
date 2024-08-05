@@ -1,42 +1,29 @@
 class Solution {
     public int equalPairs(int[][] grid) {
-     
+
         List<int[]> rowList = new ArrayList<>();
         for (int i = 0; i < grid.length; i++) {
-            int[] row = grid[i];
-            rowList.add(row);
+            rowList.add(grid[i]);
         }
-        
+
         List<int[]> colList = new ArrayList<>();
-        for (int j = 0; j < grid[0].length; j++) {
-            int[] col = new int[grid.length];
-            for (int i = 0; i < grid.length; i++) {
-                col[i] = grid[i][j];
+        for (int i = 0; i < grid[0].length; i++) {
+            int[] colArray = new int[grid[0].length];
+            for (int j = 0; j < grid.length; j++) {
+                colArray[j] = grid[j][i];
             }
-            colList.add(col);
+            colList.add(colArray);
         }
-        
+
         int count = 0;
         for (int[] row : rowList) {
             for (int[] col : colList) {
-                if (areEqual(row, col)) {
+                if (Arrays.equals(row, col)) {
                     count++;
                 }
             }
         }
 
         return count;
-    }
-    
-    private boolean areEqual(int[] array1, int[] array2) {
-        if (array1.length != array2.length) {
-            return false;
-        }
-        for (int i = 0; i < array1.length; i++) {
-            if (array1[i] != array2[i]) {
-                return false;
-            }
-        }
-        return true;
     }
 }
