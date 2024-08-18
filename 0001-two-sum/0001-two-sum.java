@@ -8,7 +8,7 @@ class Solution {
                 if ((nums[left] + nums[right]) == target) {
                     result[0] = left;
                     result[1] = right;
-                    return result; // 해결책을 찾으면 반환
+                    return result;
                 }
             }
             left++;
