@@ -4,6 +4,8 @@
 // 각각의 method에서 파라미터로 받는 timestamp는 시간 순서대로 호출됩니다. (즉 input으로 들어오는 timestamp는 계속 증가하는 형태입니다.)
 // timestamp의 값은 1부터 시작하고 hit 메소드 호출은 동시간대에 여러번 호출될 수도 있습니다. (예를 들어 counter.hit(1);이 연속으로 여러번 호출될 수 있음)
 
+// O(1)을 사용
+
 class HitCounter {
     int[] time = new int[300];
     int[] count = new int[300];
