@@ -1,10 +1,10 @@
 class Solution {
     public String addBoldTag(String s, String[] words) {
-        boolean[] bold = new boolean[s.length()];
+        boolean[] bold = new boolean[s.length()]; // 마킹 배열
         
         for (int i = 0; i < s.length(); i++) {
             for (String word : words) {
-                
+                // startsWith(String prefix, int toffset) 
                 if(s.startsWith(word, i)) {
                     for (int j = 0; j < word.length(); j++) {
                         bold[j + i] = true;
