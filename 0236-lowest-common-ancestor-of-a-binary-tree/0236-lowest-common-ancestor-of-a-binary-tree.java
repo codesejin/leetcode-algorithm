@@ -27,7 +27,7 @@ class Solution {
         // 만약 왼쪽과 오른쪽 서브트리에서 모두 노드를 찾은 경우, 현재 노드가 LCA임
         // root가 두 노드의 공통 조상일 때 의미
         if (left != null && right != null) {
-           // System.out.println("둘다 Null일때 root : " + (root != null ? root.val : null));
+           // System.out.println("둘다 Null이 아닐때 root : " + (root != null ? root.val : null));
             return root;
         }
         TreeNode rr = left != null ? left : right;
