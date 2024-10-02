@@ -1,5 +1,6 @@
 class Solution {
-        static final Map<Character, List<Character>> dic = new HashMap<>();
+    
+    static final Map<Character, List<Character>> dic = new HashMap<>();
     static {
         dic.put('0', List.of());
         dic.put('1', List.of());
